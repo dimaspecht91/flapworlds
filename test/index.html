@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flap Worlds testen</title>
+<meta name="description" content="Teste Flap Worlds für Android vor dem Start im Play Store – in 3 Schritten.">
+<meta property="og:title" content="Flap Worlds testen">
+<meta property="og:description" content="Hilf mit, damit das Spiel in den Play Store kommt – in 3 Schritten.">
+<meta property="og:image" content="https://dimaspecht91.github.io/flapworlds/test/icon.png">
+<link rel="icon" href="icon.png">
+<style>
+  :root {
+    --sky: #6cc3ea; --sky2: #a9dff3; --card: #ffffff; --text: #2b2118; --muted: #6b5a4a;
+    --green: #5aae3f; --green-dark: #3f8a2a; --brown: #9a6d44; --done: #e9f6e3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --sky: #17344a; --sky2: #0e2232; --card: #1f2a33; --text: #f2ece6; --muted: #b9aa9a; --done: #23381d; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(var(--sky), var(--sky2) 70%, var(--green) 70%, var(--green) 72%, var(--brown) 72%);
+    background-attachment: fixed;
+  }
+  main { max-width: 30rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  header { text-align: center; margin-bottom: 1.2rem; }
+  header img { width: 88px; height: 88px; border-radius: 22px; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+  h1 { font-size: 1.7rem; margin: .7rem 0 .3rem; }
+  .intro { margin: 0 auto; max-width: 26rem; line-height: 1.45; }
+  .step {
+    background: var(--card); border-radius: 18px; padding: 1rem 1rem 1.1rem; margin-top: .9rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,.15); transition: background .2s;
+  }
+  .step.done { background: var(--done); }
+  .step h2 { font-size: 1.1rem; margin: 0 0 .3rem; display: flex; align-items: center; gap: .55rem; }
+  .num {
+    flex: none; width: 1.9rem; height: 1.9rem; border-radius: 50%; display: inline-grid; place-items: center;
+    background: var(--green); color: #fff; font-weight: 800;
+  }
+  .step.done .num { background: var(--green-dark); }
+  .step p { margin: 0 0 .8rem; color: var(--muted); line-height: 1.4; font-size: .95rem; }
+  a.btn {
+    display: block; text-align: center; text-decoration: none; font-weight: 700; font-size: 1.05rem;
+    background: var(--green); color: #fff; padding: .85rem 1rem; border-radius: 12px;
+    border-bottom: 4px solid var(--green-dark);
+  }
+  a.btn:active { transform: translateY(2px); border-bottom-width: 2px; }
+  .note {
+    margin-top: 1.2rem; background: var(--card); border-radius: 14px; padding: .9rem 1rem;
+    font-size: .9rem; line-height: 1.45; box-shadow: 0 3px 10px rgba(0,0,0,.12);
+  }
+  .note ul { margin: .3rem 0 0; padding-left: 1.1rem; }
+  .en { margin-top: 1.5rem; text-align: center; font-size: .85rem; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.4); }
+  .en a { color: #fff; }
+  footer { text-align: center; margin-top: 1.5rem; font-size: .8rem; color: #fff; }
+  footer a { color: #fff; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="Flap Worlds Symbol">
+    <h1 data-de="Flap Worlds testen" data-en="Test Flap Worlds">Flap Worlds testen</h1>
+    <p class="intro" data-de="Danke, dass du hilfst! Bevor das Spiel öffentlich in den Play Store darf, braucht Google 12 Tester für 14 Tage. Das dauert nur eine Minute."
+       data-en="Thanks for helping! Before the game can go public on Google Play, Google needs 12 testers for 14 days. It only takes a minute.">Danke, dass du hilfst! Bevor das Spiel öffentlich in den Play Store darf, braucht Google 12 Tester für 14 Tage. Das dauert nur eine Minute.</p>
+  </header>
+
+  <section class="step" id="s1">
+    <h2><span class="num">1</span><span data-de="Gruppe beitreten" data-en="Join the group">Gruppe beitreten</span></h2>
+    <p data-de="Tippe auf „Gruppe beitreten“. Melde dich mit dem Google-Konto an, das auf deinem Handy ist."
+       data-en="Tap “Join group”. Sign in with the Google account that is on your phone.">Tippe auf „Gruppe beitreten“. Melde dich mit dem Google-Konto an, das auf deinem Handy ist.</p>
+    <a class="btn" target="_blank" rel="noopener" href="https://groups.google.com/g/flapworlds-tester" data-de="Zur Gruppe" data-en="Open the group">Zur Gruppe</a>
+  </section>
+
+  <section class="step" id="s2">
+    <h2><span class="num">2</span><span data-de="Tester werden" data-en="Become a tester">Tester werden</span></h2>
+    <p data-de="Tippe auf „Tester werden“. Falls dort „nicht verfügbar“ steht, ein paar Minuten warten und neu laden."
+       data-en="Tap “Become a tester”. If it says “not available”, wait a few minutes and reload.">Tippe auf „Tester werden“. Falls dort „nicht verfügbar“ steht, ein paar Minuten warten und neu laden.</p>
+    <a class="btn" target="_blank" rel="noopener" href="https://play.google.com/apps/testing/dev.dima.flapworlds" data-de="Tester werden" data-en="Become a tester">Tester werden</a>
+  </section>
+
+  <section class="step" id="s3">
+    <h2><span class="num">3</span><span data-de="Spiel installieren" data-en="Install the game">Spiel installieren</span></h2>
+    <p data-de="Installieren, ab und zu spielen und die App mindestens 14 Tage drauflassen."
+       data-en="Install it, play now and then, and keep the app for at least 14 days.">Installieren, ab und zu spielen und die App mindestens 14 Tage drauflassen.</p>
+    <a class="btn" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=dev.dima.flapworlds" data-de="Im Play Store öffnen" data-en="Open on Google Play">Im Play Store öffnen</a>
+  </section>
+
+  <div class="note">
+    <strong data-de="Gut zu wissen" data-en="Good to know">Gut zu wissen</strong>
+    <ul>
+      <li data-de="Nur für Android. Das Spiel ist kostenlos." data-en="Android only. The game is free.">Nur für Android. Das Spiel ist kostenlos.</li>
+      <li data-de="Immer dasselbe Google-Konto benutzen, sonst zählt die Anmeldung nicht." data-en="Use the same Google account each time, otherwise it doesn't count.">Immer dasselbe Google-Konto benutzen, sonst zählt die Anmeldung nicht.</li>
+      <li data-de="Fehler gefunden oder eine Idee? Schreib an spechtdima@gmx.de." data-en="Found a bug or have an idea? Write to spechtdima@gmx.de.">Fehler gefunden oder eine Idee? Schreib an spechtdima@gmx.de.</li>
+    </ul>
+  </div>
+
+  <p class="en"><a href="#" id="lang">English</a></p>
+  <footer><a href="../android/" data-de="Datenschutzerklärung" data-en="Privacy policy">Datenschutzerklärung</a></footer>
+</main>
+<script>
+  // Sprache: Deutsch bei deutscher Browsersprache, sonst Englisch; Link schaltet um.
+  var lang = (navigator.language || "de").toLowerCase().indexOf("de") === 0 ? "de" : "en";
+  function apply() {
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-de]").forEach(function (el) { el.textContent = el.getAttribute("data-" + lang); });
+    document.getElementById("lang").textContent = lang === "de" ? "English" : "Deutsch";
+    document.title = lang === "de" ? "Flap Worlds testen" : "Test Flap Worlds";
+  }
+  document.getElementById("lang").addEventListener("click", function (e) { e.preventDefault(); lang = lang === "de" ? "en" : "de"; apply(); });
+  // Erledigte Schritte grün markieren (nur auf diesem Gerät).
+  document.querySelectorAll(".step a.btn").forEach(function (a) {
+    var id = a.closest(".step").id;
+    try { if (localStorage.getItem("fw-" + id)) a.closest(".step").classList.add("done"); } catch (e) {}
+    a.addEventListener("click", function () {
+      a.closest(".step").classList.add("done");
+      try { localStorage.setItem("fw-" + id, "1"); } catch (e) {}
+    });
+  });
+  apply();
+</script>
+</body>
+</html>
